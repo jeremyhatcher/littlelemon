@@ -28,4 +28,6 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/menu/', MenuItemsView.as_view(), name='menu_items'),
     path('api/menu/int/<int:pk>', SingleMenuItemView.as_view(), name='single-menu-item'),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
 ]
